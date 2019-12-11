@@ -5,13 +5,16 @@ const path = require('path');
 module.exports = {
   entry: './src/app/app.js',
   output: {
-    filename: 'my-first-webpack.bundle.js',
+    filename: '[name].[contenthash].js',
     path: path.resolve(__dirname, 'dist')
   },
   module: {
    
   },
   plugins: [
-    new HtmlWebpackPlugin({template: './src/index.html'})
+    new HtmlWebpackPlugin({
+      template: './src/index.html',
+      title: 'Caching'
+    }),
   ]
 };

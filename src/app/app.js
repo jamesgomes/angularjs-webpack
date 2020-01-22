@@ -1,8 +1,7 @@
 import angular from 'angular';
+import './main/main.module';
 
-const mainApp = angular.module('mainApp', []);
-
+var mainApp = angular.module('mainApp', ['mainModule']);
 mainApp.controller('appController',  ['$scope', function ($scope) {
     $scope.title ='Hello Angular';
-}]
-)
+}]);

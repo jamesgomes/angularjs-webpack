@@ -9,7 +9,20 @@ module.exports = {
     path: path.resolve(__dirname, 'dist')
   },
   module: {
-   
+   rules:[
+     {
+       test: /\.(html)$/, 
+       use:'html-loader'
+     },
+     {
+      test: /\.scss$/, 
+      use: [
+        'style-loader',
+        'css-loader',
+        'sass-loader'
+       ]
+    }
+   ]
   },
   plugins: [
     new HtmlWebpackPlugin({

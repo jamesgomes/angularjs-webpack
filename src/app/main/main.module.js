@@ -1,5 +1,5 @@
 import mainComponent from './main.component';
-require('./');
+require('./main.component.scss');
 
 export default angular
   .module('mainModule', [])

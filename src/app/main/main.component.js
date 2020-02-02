@@ -4,8 +4,8 @@ mainComponentCtrl.$inject = [];
 
 function mainComponentCtrl ($timeout) {
     let ctrl = this;
-    function init(){
-        ctrl.title = "Meu componente ajs asjas ";
+    const init = () => {
+        ctrl.title = "Texto do meu componente!";
     }
     ctrl.$onInit = init;
 }
